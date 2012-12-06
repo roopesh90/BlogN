@@ -1,0 +1,18 @@
+<?php
+
+namespace app\extensions\helper;
+
+class AwesomeHtml extends \lithium\template\Helper {
+
+    private $_strings = array(
+        'awesome'    => '<a class="awesome" href="{:url}">{:title}</a>',
+        'super_cool' => '<span class="super"><a class="cool" href="{:url}">{:title}</a></span>',
+    );
+
+    public function link($title, $url, $options) {
+        $title = $this->escape($title);
+        return $this->_render(__METHOD__, $options['type'], compact('title', 'url'));
+    }
+}
+
+?>

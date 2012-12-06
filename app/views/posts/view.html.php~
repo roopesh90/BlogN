@@ -1,0 +1,7 @@
+&nbsp 
+<h3> <b>Already Posted ....</b> </h3>
+
+<article>
+        <h1><?=$this->html->link($post->title,'Posts::view'.$post->_id); ?></h1>
+        <p><?=$post->body; ?></p>
+    </article>

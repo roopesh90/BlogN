@@ -1,0 +1,11 @@
+<h4> Delete Posts </h4>
+<p>Enter the post Title ( Very first occurance gets deleted..)</p>
+<?=$this->form->create(); ?>
+    <?=$this->form->field('title');?>
+    <?=$this->form->submit('Delete Post'); ?>
+<?=$this->form->end(); ?>
+
+
+<?php if ($success): ?>
+    <p style="color: red;">Post Successfully Deleted</p>
+<?php endif; ?>

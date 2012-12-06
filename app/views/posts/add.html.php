@@ -1,0 +1,14 @@
+<h4> Add Posts </h4>
+<p>Enter the post Title and its content</p>
+<?= $this->form->create(); ?>
+    <?=$this->form->field('title', array('type' => 'text'));?>
+    <?=$this->form->field('body', array('type' => 'textarea'));?>
+<?=$this->form->field('timestamp', array('type' => 'hidden', 'value'=> date('m/d/Y h:i:s a', time())));?>
+    <?=$this->form->submit('Add Post'); ?>
+<?=$this->form->end(); ?>
+
+<?php if (!$success): ?>
+    <p style="color: red;">Post Unseccessful</p>
+<?php else: ?> 
+   <p style="color: Blue;">Post Successfully Saved?></p> 
+<?php endif; ?>
